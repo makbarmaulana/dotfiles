@@ -34,9 +34,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
 
 # Enable completions
 autoload -U compinit && compinit
@@ -52,6 +52,8 @@ alias ll="ls -lah"
 alias gs="git status"
 alias gc="git commit -m"
 alias gp="git push"
+alias ga="git add"
+alias gaa="git add -A"
 alias dc="docker compose"
 alias py="python3"
 alias c="clear"
