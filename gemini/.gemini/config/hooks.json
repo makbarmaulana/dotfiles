@@ -1,0 +1,12 @@
+{
+  "pre_tool_execution": [
+    {
+      "action": "execute",
+      "command": "bash",
+      "args": [
+        "-c",
+        "if ! curl -s -m 1 http://127.0.0.1:3845/mcp >/dev/null 2>&1; then echo \"⚠️ WARNING: Figma Desktop is not running! Fallback to figma-remote-mcp-server (https://mcp.figma.com/mcp).\"; fi"
+      ]
+    }
+  ]
+}

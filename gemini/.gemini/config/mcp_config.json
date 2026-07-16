@@ -7,6 +7,13 @@
         "-c",
         "GITHUB_PERSONAL_ACCESS_TOKEN=$(gh auth token) npx -y @modelcontextprotocol/server-github"
       ]
+    },
+    "figma-dev-mode-mcp-server": {
+      "serverUrl": "http://127.0.0.1:3845/mcp"
+    },
+    "figma-remote-mcp-server": {
+      "type": "http",
+      "serverUrl": "https://mcp.figma.com/mcp"
     }
   }
 }
