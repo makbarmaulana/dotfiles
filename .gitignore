@@ -34,18 +34,17 @@
 # ==== EXCEPTIONS (Keep configurations, skills, rules, hooks, and MCP) ====
 
 # 1. Settings and Plugins for CLI & IDE
-!**/.gemini/antigravity-cli/settings.json
-!**/.gemini/antigravity-ide/settings.json
+!**/.gemini/**/settings.json
 
 # 2. Custom Skills (Knowledge)
-!**/.gemini/antigravity-cli/knowledge/
-!**/.gemini/antigravity-ide/knowledge/
-!**/.gemini/antigravity-cli/skills/
-!**/.gemini/antigravity-ide/skills/
+!**/.gemini/**/knowledge/
+!**/.gemini/**/skills/
 
 # 3. Custom Rules (Explicit)
-!**/.gemini/antigravity-cli/rules/
-!**/.gemini/antigravity-ide/rules/
+!**/.gemini/**/rules/
+
+# 4. Custom Plugins
+!**/.gemini/**/plugins/
 
 # 4. Exclude ephemeral/state files inside whitelisted directories
 **/.gemini/**/*.lock

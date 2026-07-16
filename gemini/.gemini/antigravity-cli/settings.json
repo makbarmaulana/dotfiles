@@ -6,7 +6,10 @@
   "permissions": {
     "allow": [
       "command(git status)",
-      "command(git diff)"
+      "command(git diff)",
+      "command(git log)",
+      "command(git check-ignore)",
+      "command(git ls-files)"
     ]
   },
   "statusLine": {
