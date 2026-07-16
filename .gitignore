@@ -1,4 +1,5 @@
 # Never Commit
+.secrets.env
 **/hosts.yml
 **/*.pem
 **/*.key
@@ -50,5 +51,6 @@
 **/.gemini/**/*.lock
 **/.gemini/**/.migrated
 **/.gemini/config/projects/default-cli-project.json
+
 
 
