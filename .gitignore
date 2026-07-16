@@ -14,3 +14,42 @@
 **/*.zwc
 **/*_history
 **/*.log
+
+# ==============================================================================
+# Gemini / Antigravity AI
+# ==============================================================================
+
+# Ignore all contents in the .gemini folder
+**/.gemini/*
+
+# Un-ignore the directories we need to traverse
+!**/.gemini/config/
+!**/.gemini/antigravity-cli/
+!**/.gemini/antigravity-ide/
+
+# Ignore everything inside those directories by default
+**/.gemini/antigravity-cli/*
+**/.gemini/antigravity-ide/*
+
+# ==== EXCEPTIONS (Keep configurations, skills, rules, hooks, and MCP) ====
+
+# 1. Settings and Plugins for CLI & IDE
+!**/.gemini/antigravity-cli/settings.json
+!**/.gemini/antigravity-ide/settings.json
+
+# 2. Custom Skills (Knowledge)
+!**/.gemini/antigravity-cli/knowledge/
+!**/.gemini/antigravity-ide/knowledge/
+!**/.gemini/antigravity-cli/skills/
+!**/.gemini/antigravity-ide/skills/
+
+# 3. Custom Rules (Explicit)
+!**/.gemini/antigravity-cli/rules/
+!**/.gemini/antigravity-ide/rules/
+
+# 4. Exclude ephemeral/state files inside whitelisted directories
+**/.gemini/**/*.lock
+**/.gemini/**/.migrated
+**/.gemini/config/projects/default-cli-project.json
+
+

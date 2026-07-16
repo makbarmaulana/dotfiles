@@ -1,0 +1,21 @@
+{
+  "colorScheme": "tokyo night",
+  "enableTelemetry": false,
+  "model": "Gemini 3.1 Pro (High)",
+  "notifications": true,
+  "permissions": {
+    "allow": [
+      "command(git status)",
+      "command(git diff)"
+    ]
+  },
+  "statusLine": {
+    "type": "",
+    "command": "",
+    "enabled": true
+  },
+  "trustedWorkspaces": [
+    "/home/akbar",
+    "/home/akbar/dotfiles"
+  ]
+}
