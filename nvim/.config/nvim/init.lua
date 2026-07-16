@@ -378,6 +378,7 @@ require("lazy").setup({
 			require("neo-tree").setup({
 				close_if_last_window = true,
 				filesystem = {
+					hijack_netrw_behavior = "disabled",
 					filtered_items = {
 						visible = true, -- show hidden/gitignored items in the tree (still togglable with `H`)
 						hide_dotfiles = false,
