@@ -1,0 +1,16 @@
+# Never Commit
+**/hosts.yml
+**/*.pem
+**/*.key
+**/id_rsa*
+**/id_ed25519*
+**/known_hosts
+**/agent.sock
+**/*credentials*
+**/*token*
+
+# Cache & generated files
+**/.zcompdump*
+**/*.zwc
+**/*_history
+**/*.log
