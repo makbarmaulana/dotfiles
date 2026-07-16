@@ -36,20 +36,17 @@
 # 1. Settings and Plugins for CLI & IDE
 !**/.gemini/**/settings.json
 
-# 2. Custom MCP servers
-!**/.gemini/**/mcp/
-
-# 3. Custom Skills (Knowledge)
+# 2. Custom Skills (Knowledge)
 !**/.gemini/**/knowledge/
 !**/.gemini/**/skills/
 
-# 4. Custom Rules (Explicit)
+# 3. Custom Rules (Explicit)
 !**/.gemini/**/rules/
 
-# 5. Custom Plugins
+# 4. Custom Plugins
 !**/.gemini/**/plugins/
 
-# 6. Exclude ephemeral/state files inside whitelisted directories
+# 5. Exclude ephemeral/state files inside whitelisted directories
 **/.gemini/**/*.lock
 **/.gemini/**/.migrated
 **/.gemini/config/projects/default-cli-project.json

@@ -1,13 +1,5 @@
 {
   "mcpServers": {
-    "github": {
-      "type": "stdio",
-      "command": "bash",
-      "args": [
-        "-c",
-        "GITHUB_PERSONAL_ACCESS_TOKEN=$(gh auth token) npx -y @modelcontextprotocol/server-github"
-      ]
-    },
     "figma-dev-mode-mcp-server": {
       "serverUrl": "http://127.0.0.1:3845/mcp"
     },
@@ -16,19 +8,12 @@
       "serverUrl": "https://mcp.figma.com/mcp"
     },
     "github-mcp-server": {
-      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
-      "command": "docker",
+      "type": "stdio",
+      "command": "bash",
       "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "GITHUB_PERSONAL_ACCESS_TOKEN",
-        "ghcr.io/github/github-mcp-server"
-      ],
-      "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "asdadasdsa"
-      }
+        "-c",
+        "GITHUB_PERSONAL_ACCESS_TOKEN=$(gh auth token) npx -y @modelcontextprotocol/server-github"
+      ]
     }
   }
 }
