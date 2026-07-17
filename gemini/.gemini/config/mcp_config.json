@@ -20,7 +20,7 @@
       "command": "bash",
       "args": [
         "-c",
-        "source ~/dotfiles/.secrets.env 2>/dev/null || true; npx -y @upstash/context7-mcp@latest"
+        "source $HOME/dotfiles/.secrets.env 2>/dev/null; env CONTEXT7_API_KEY=\"$CONTEXT7_API_KEY\" npx -y @upstash/context7-mcp@latest" 
       ]
     }
   }
