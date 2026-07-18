@@ -19,6 +19,10 @@
   },
   "trustedWorkspaces": [
     "/home/akbar",
-    "/home/akbar/dotfiles"
+    "/home/akbar/dotfiles",
+    "/home/akbar/Repos",
+    "C:\\Users\\makba",
+    "C:\\Users\\makba\\dotfiles",
+    "C:\\Users\\makba\\Repos"
   ]
 }
