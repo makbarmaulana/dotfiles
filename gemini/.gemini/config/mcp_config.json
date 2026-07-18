@@ -22,6 +22,42 @@
         "-c",
         "source $HOME/dotfiles/.secrets.env 2>/dev/null; env CONTEXT7_API_KEY=\"$CONTEXT7_API_KEY\" npx -y @upstash/context7-mcp@latest"
       ]
+    },
+    "dart-mcp-server": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "dart",
+      "args": [
+        "mcp-server"
+      ],
+      "env": {}
+    },
+    "firebase-mcp-server": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firebase-tools@latest",
+        "mcp"
+      ],
+      "env": {}
+    },
+    "sequential-thinking": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "env": {}
+    },
+    "chrome-devtools-mcp": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "env": {}
     }
   }
 }
