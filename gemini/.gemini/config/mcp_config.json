@@ -4,23 +4,27 @@
       "serverUrl": "http://127.0.0.1:3845/mcp"
     },
     "figma-remote-mcp-server": {
-      "type": "http",
-      "serverUrl": "https://mcp.figma.com/mcp"
-    },
-    "github-mcp-server": {
-      "type": "stdio",
-      "command": "bash",
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "node",
       "args": [
-        "-c",
-        "GITHUB_PERSONAL_ACCESS_TOKEN=$(gh auth token) npx -y @modelcontextprotocol/server-github"
-      ]
+        "-e",
+        "require(require('os').homedir()+'/dotfiles/mcp-runner.js')",
+        "npx",
+        "-y",
+        "figma-developer-mcp",
+        "--stdio"
+      ],
+      "env": {}
     },
     "context7": {
       "type": "stdio",
-      "command": "bash",
+      "command": "node",
       "args": [
-        "-c",
-        "source $HOME/dotfiles/.secrets.env 2>/dev/null; env CONTEXT7_API_KEY=\"$CONTEXT7_API_KEY\" npx -y @upstash/context7-mcp@latest"
+        "-e",
+        "require(require('os').homedir()+'/dotfiles/mcp-runner.js')",
+        "npx",
+        "-y",
+        "@upstash/context7-mcp@latest"
       ]
     },
     "dart-mcp-server": {
@@ -56,6 +60,41 @@
       "args": [
         "-y",
         "chrome-devtools-mcp@latest"
+      ],
+      "env": {}
+    },
+    "github-mcp-server": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "node",
+      "args": [
+        "-e",
+        "require(require('os').homedir()+'/dotfiles/mcp-runner.js')",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {}
+    },
+    "mcp-server-neon": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.neon.tech/sse"
+      ],
+      "env": {}
+    },
+    "supabase": {
+      "serverUrl": "https://mcp.supabase.com/mcp"
+    },
+    "prisma-mcp-server": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
+      "args": [
+        "-y",
+        "prisma",
+        "mcp"
       ],
       "env": {}
     }
