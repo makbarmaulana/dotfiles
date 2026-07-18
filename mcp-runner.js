@@ -27,6 +27,17 @@ if (args.length === 0) process.exit(0);
 const cmd = args[0];
 const cmdArgs = args.slice(1);
 
+// Di Windows, perintah npx harus dieksekusi sebagai npx.cmd jika menggunakan child_process
+if (process.platform === 'win32' && cmd === 'npx') {
+    cmd = 'npx.cmd';
+}
+
 // Jalankan perintah dengan environment variables yang sudah digabung
 const result = spawnSync(cmd, cmdArgs, { stdio: 'inherit', env });
-process.exit(result.status || 0);
+
+if (result.error) {
+    console.error(`Error spawning ${cmd}:`, result.error);
+    process.exit(1);
+}
+
+process.exit(result.status !== null ? result.status : 1);
